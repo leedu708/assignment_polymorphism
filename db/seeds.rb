@@ -10,7 +10,7 @@ Student.delete_all
 GraduateProgram.delete_all
 UndergraduateProgram.delete_all
 
-puts 'Entres Deleted'
+puts 'Entries Deleted'
 
 12.times do
   GraduateProgram.create(:name => Faker::Company.name)
@@ -32,7 +32,7 @@ Student.all.map do |s|
 
   filter = rand
 
-  if filter < 0.35
+  if filter < 0.4
     GraduateProgram.all.sample.students << s
   elsif filter < 1.0
     UndergraduateProgram.all.sample.students << s
