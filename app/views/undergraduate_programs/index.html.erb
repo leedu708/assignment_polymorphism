@@ -1,0 +1,13 @@
+<h1>Undergraduate Programs</h1>
+
+<ul>
+
+  <% @programs.each do |program| %>
+    <li>
+      <%= link_to "#{program.id}: #{program.name}", undergraduate_program_students_path(program.id) %>
+    </li>
+  <% end %>
+
+</ul>
+
+<%= link_to "Graduate Programs", graduate_programs_path %>
